@@ -16,7 +16,7 @@ function App() {
 
     const [quoteResponses, setQuoteResponses] = useState([]);
     useEffect(() => {
-        const category = "happiness";
+        const category = "money";
         fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`,{
             headers: { 'X-Api-Key': 'lMR7MvBsNn9GjF8solFxRA==i1Eb7mTNQckR5Lnv  '}
         }).then(res => {
@@ -29,7 +29,7 @@ function App() {
 
     return (
         <div className="App">
-            {quoteResponses.map(quoteResponse => <div>
+            {quoteResponses.map(quoteResponse => <div className="quote-wrapper">
                 <div>
                     {quoteResponse.quote}
                 </div>
